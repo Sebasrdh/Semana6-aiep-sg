@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "306807904730",
+    "project_id": "semana6-393e8",
+    "storage_bucket": "semana6-393e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306807904730:android:b1a6f1771ae896ad9a48e3",
+        "android_client_info": {
+          "package_name": "com.aiep.semana5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWVh7bvm9W2I-HTX-kHaA2UzXKHUOwC6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

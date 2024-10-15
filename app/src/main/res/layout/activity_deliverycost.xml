@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_menuactivity"
+    tools:context=".Deliverycost">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_predefined_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ubicación Bodega:"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/address_storage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitud: -33.456, Longitud: -70.648" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/card_predefined_location" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_real_time_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        android:layout_below="@id/card_predefined_location"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ubicación en Tiempo Real:"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_real_time_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitud: N/A, Longitud: N/A" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/deliverycost_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Despacho: $0 CLP"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/card_real_time_location"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:text="Volver"
+        android:textSize="16sp" />
+
+</RelativeLayout>

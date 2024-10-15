@@ -1,5 +1,6 @@
 package com.aiep.semana5
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
@@ -16,6 +17,7 @@ class Register : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private var isPasswordVisible: Boolean = false
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
@@ -50,7 +52,7 @@ class Register : AppCompatActivity() {
                         }
 
                         Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, MenuActivity::class.java)
+                        val intent = Intent(this, Setpage::class.java)
                         startActivity(intent)
                         finish()
                     } else {

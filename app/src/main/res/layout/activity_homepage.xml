@@ -35,7 +35,6 @@
             android:textSize="28sp"
             android:textColor="@color/white"/>
 
-
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
@@ -144,15 +143,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="10dp" />
 
-
-
-
-
-
         </LinearLayout>
 
-
     </androidx.cardview.widget.CardView>
-
 
 </RelativeLayout>

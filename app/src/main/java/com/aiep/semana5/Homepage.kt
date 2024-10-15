@@ -1,5 +1,6 @@
 package com.aiep.semana5
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
@@ -17,6 +18,7 @@ class Homepage : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private var isPasswordVisible: Boolean = false
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,8 +44,8 @@ class Homepage : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        // Autenticación exitosa, mover a MenuActivity
-                        val intent = Intent(this, MenuActivity::class.java)
+                        // Autenticación exitosa, mover a Setpage
+                        val intent = Intent(this, Setpage::class.java)
                         startActivity(intent)
                         finish() // Finaliza la actividad actual
                     } else {

@@ -49,6 +49,8 @@ dependencies {
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -58,4 +60,6 @@ dependencies {
     implementation ("com.google.firebase:firebase-database-ktx:20.0.5") // Verifica la última versión
     implementation ("com.google.android.gms:play-services-maps:19.0.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 }

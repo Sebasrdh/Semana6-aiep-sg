@@ -31,12 +31,11 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnlogout"
+        android:id="@+id/btnback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
-        android:text="Cerrar sesión"
+        android:layout_marginBottom="28dp"
+        android:text="Volver"
         android:textSize="16sp" />
-
 </RelativeLayout>

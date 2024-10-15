@@ -22,11 +22,11 @@ import com.google.firebase.database.FirebaseDatabase
 
 class MenuActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    private lateinit var buttonLogout: Button
     private lateinit var mMap: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private val LOCATION_REQUEST_CODE = 1000
     private lateinit var database: DatabaseReference
+    private lateinit var buttonBack: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,16 +39,15 @@ class MenuActivity : AppCompatActivity(), OnMapReadyCallback {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         // Referencias a los elementos del layout
-        buttonLogout = findViewById(R.id.btnlogout)
+        buttonBack = findViewById(R.id.btnback)
 
         // Configuración del mapa
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
-        // Listener para el botón de cerrar sesión
-        buttonLogout.setOnClickListener {
-            cerrarSesion()
+        buttonBack.setOnClickListener {
+            volver()
         }
 
         // Verificar permisos y obtener ubicación
@@ -139,15 +138,10 @@ class MenuActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    private fun cerrarSesion() {
-        // Cierra sesión del usuario en Firebase
-        val auth = FirebaseAuth.getInstance()
-        auth.signOut()
-        Toast.makeText(this, "Has cerrado sesión", Toast.LENGTH_SHORT).show()
 
-        // Redirige al usuario a la pantalla de inicio de sesión
-        val intent = Intent(this, Homepage::class.java)
+    private fun volver() {
+        val intent = Intent(this, Setpage::class.java)
         startActivity(intent)
-        finish() // Finaliza la actividad actual
+        finish()
     }
 }

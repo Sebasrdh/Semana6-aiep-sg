@@ -24,7 +24,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDBSFAsJSB1z3FyEovmkng-CNzU4s7V8xU" />
+            android:value="YOUR_API_KEY" />
 
         <activity android:name=".Register" />
         <activity android:name=".DeliveryCost"/>
